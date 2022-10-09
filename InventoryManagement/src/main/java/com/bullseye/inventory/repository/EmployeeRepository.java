@@ -8,4 +8,6 @@ import com.bullseye.inventory.entity.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
+	Employee findByEmail(String email);
+
 }

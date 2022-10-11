@@ -81,7 +81,7 @@ public class Employee {
 		this.salary = salary;
 	}
 	public Employee(int id, String name, String username, String password, String email, String phone, String role,
-			String address, Long salary) {
+			String address, Long salary, String profileUrl) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -92,6 +92,7 @@ public class Employee {
 		this.role = role;
 		this.address = address;
 		this.salary = salary;
+		this.profileUrl = profileUrl;
 	}
 	public Employee() {
 		super();
@@ -101,8 +102,11 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password
 				+ ", email=" + email + ", phone=" + phone + ", role=" + role + ", address=" + address + ", salary="
-				+ salary + "]";
+				+ salary + ", profileUrl=" + profileUrl + "]";
 	}
+	
+	
+	
 	
 	
 	

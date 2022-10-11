@@ -1,5 +1,7 @@
 package com.bullseye.inventory.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +28,7 @@ public class ReportController {
 	
 	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("/getReportBySubmitted/{name}")
-	public Report getReportBySubmittedTo(@PathVariable("name") String submittedTo) {
+	public List<Report> getReportBySubmittedTo(@PathVariable("name") String submittedTo) {
 		return service.getReportBySubmittedTo(submittedTo);
 	}
 	

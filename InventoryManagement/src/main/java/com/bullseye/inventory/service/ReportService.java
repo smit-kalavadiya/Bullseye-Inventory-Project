@@ -1,5 +1,7 @@
 package com.bullseye.inventory.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,7 @@ public class ReportService {
 		return report_repo.save(data);
 	}
 
-	public Report getReportBySubmittedTo(String submittedTo) {
+	public List<Report> getReportBySubmittedTo(String submittedTo) {
 		return report_repo.findBySubmittedTo(submittedTo);
 	}
 	

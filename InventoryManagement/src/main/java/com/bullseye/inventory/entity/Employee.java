@@ -18,6 +18,8 @@ public class Employee {
 	String role;
 	String address;
 	Long salary;
+	String profileUrl;
+	
 	public int getId() {
 		return id;
 	}

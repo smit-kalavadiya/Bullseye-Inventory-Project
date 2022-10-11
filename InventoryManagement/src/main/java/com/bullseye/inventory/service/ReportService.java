@@ -18,6 +18,12 @@ public class ReportService {
 		
 		return report_repo.save(data);
 	}
+
+	public Report getReportBySubmittedTo(String submittedTo) {
+		return report_repo.findBySubmittedTo(submittedTo);
+	}
+	
+	
 	
 	
 	

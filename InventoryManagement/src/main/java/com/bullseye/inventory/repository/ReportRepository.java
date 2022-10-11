@@ -8,4 +8,7 @@ import com.bullseye.inventory.entity.Report;
 @Repository
 public interface ReportRepository extends JpaRepository<Report, Integer> {
 
+	Report findBySubmittedTo(String submittedTo);
+
+	
 }

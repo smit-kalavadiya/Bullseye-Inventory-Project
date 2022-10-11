@@ -24,6 +24,7 @@ public class ReportController {
 		return service.sendReport(data);
 	}
 	
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("/getReportBySubmitted/{name}")
 	public Report getReportBySubmittedTo(@PathVariable("name") String submittedTo) {
 		return service.getReportBySubmittedTo(submittedTo);

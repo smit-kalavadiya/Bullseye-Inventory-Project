@@ -18,4 +18,8 @@ public class OrdersService {
 		return repo.findAll();
 	}
 
+	public Orders sendOrder(Orders order) {
+		return repo.save(order);
+	}
+
 }

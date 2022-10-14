@@ -22,7 +22,6 @@ public class OrdersController {
 	@GetMapping("/Orders")
 	public List<Orders> getOrders(){ 
 		return service.getOrders(); 
-		
 	}
 	
 	@CrossOrigin(origins = "http://localhost:4200")

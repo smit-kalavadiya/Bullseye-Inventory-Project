@@ -1,6 +1,7 @@
 package com.bullseye.inventory.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,7 +23,7 @@ public class OrderItems {
 	
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/OrderItems")
-	public String addItems(@RequestBody OrderItem[] orders) {
+	public Map<String,String> addItems(@RequestBody OrderItem[] orders) {
 		return orderService.addItems(orders);
 	}
 	

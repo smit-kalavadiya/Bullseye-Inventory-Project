@@ -17,6 +17,16 @@ public class Orders{
 	String title;
 	
 	
+	public Orders() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public int getId() {
 		return id;
 	}
@@ -47,23 +57,17 @@ public class Orders{
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Orders(int id, String type, String date, String address, String status) {
+	public Orders(int id, String type, String date, String address, String status, String title) {
 		super();
 		this.id = id;
 		this.type = type;
 		this.date = date;
 		this.address = address;
 		this.status = status;
+		this.title = title;
 	}
-	public Orders() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	@Override
-	public String toString() {
-		return "Order [id=" + id + ", type=" + type + ", date=" + date + ", address=" + address + ", status=" + status
-				+ "]";
-	}
+	
+	
 	
 	
 	

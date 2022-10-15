@@ -14,7 +14,7 @@ public class Orders{
 	String date;
 	String address;
 	String status;
-	
+	String title;
 	
 	
 	public int getId() {

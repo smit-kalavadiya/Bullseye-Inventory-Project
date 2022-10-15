@@ -14,15 +14,14 @@ public class Orders{
 	String date;
 	String address;
 	String status;
-	String orderBy;
+	String orderby;
 	String title;
 	
-	
-	public String getOrderBy() {
-		return orderBy;
+	public String getOrderby() {
+		return orderby;
 	}
-	public void setOrderBy(String orderBy) {
-		this.orderBy = orderBy;
+	public void setOrderby(String orderby) {
+		this.orderby = orderby;
 	}
 	public String getTitle() {
 		return title;
@@ -71,7 +70,7 @@ public class Orders{
 		this.date = date;
 		this.address = address;
 		this.status = status;
-		this.orderBy = orderBy;
+		this.orderby = orderBy;
 		this.title = title;
 	}
 }

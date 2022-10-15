@@ -18,9 +18,11 @@ public class Orders{
 	String title;
 	
 	
-	public Orders() {
-		super();
-		// TODO Auto-generated constructor stub
+	public String getOrderBy() {
+		return orderBy;
+	}
+	public void setOrderBy(String orderBy) {
+		this.orderBy = orderBy;
 	}
 	public String getTitle() {
 		return title;
@@ -55,16 +57,21 @@ public class Orders{
 	public String getStatus() {
 		return status;
 	}
+	public Orders() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Orders(int id, String type, String date, String address, String status, String title) {
+	public Orders(int id, String type, String date, String address, String status, String orderBy, String title) {
 		super();
 		this.id = id;
 		this.type = type;
 		this.date = date;
 		this.address = address;
 		this.status = status;
+		this.orderBy = orderBy;
 		this.title = title;
 	}
 }

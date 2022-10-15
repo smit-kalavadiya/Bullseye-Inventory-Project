@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.bullseye.inventory.entity.Employee;
 import com.bullseye.inventory.entity.Orders;
 import com.bullseye.inventory.repository.OrdersRepository;
 

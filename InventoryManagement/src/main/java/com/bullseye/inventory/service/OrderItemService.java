@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bullseye.inventory.entity.OrderItem;
+import com.bullseye.inventory.entity.Orders;
 import com.bullseye.inventory.repository.OrderItemRepository;
 
 @Service
@@ -22,5 +23,10 @@ public class OrderItemService {
 		map.put("response","Data Saved");
 		return map;
 	}
+
+	public List<OrderItem> findByOrderId(String order) {
+		return orderItemRepository.findByOrderid(Integer.parseInt(order));
+	}
+
 
 }

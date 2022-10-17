@@ -17,6 +17,13 @@ public class OrderItem {
 	long tax;
 	String dimension;
 	String weight;
+	int orderid;
+	public int getOrderid() {
+		return orderid;
+	}
+	public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
 	String season;
 	public int getId() {
 		return id;
@@ -73,7 +80,7 @@ public class OrderItem {
 		this.season = season;
 	}
 	public OrderItem(int id, String name, String description, int quantity, long price, long tax, String dimension,
-			String weight, String season) {
+			String weight, int orderid, String season) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -83,6 +90,7 @@ public class OrderItem {
 		this.tax = tax;
 		this.dimension = dimension;
 		this.weight = weight;
+		this.orderid = orderid;
 		this.season = season;
 	}
 	public OrderItem() {
@@ -92,11 +100,8 @@ public class OrderItem {
 	@Override
 	public String toString() {
 		return "OrderItem [id=" + id + ", name=" + name + ", description=" + description + ", quantity=" + quantity
-				+ ", price=" + price + ", tax=" + tax + ", dimension=" + dimension + ", weight=" + weight + ", season="
-				+ season + "]";
+				+ ", price=" + price + ", tax=" + tax + ", dimension=" + dimension + ", weight=" + weight + ", orderid="
+				+ orderid + ", season=" + season + "]";
 	}
-	
-	
-	
 	
 }

@@ -35,11 +35,11 @@ public class OrderItems {
 	}
 	
 	@CrossOrigin(origins = "http://localhost:4200")
-	@RequestMapping("/getItems/")
-	public List<OrderItem> findByOrderId(@RequestParam(value="orderid") String order) {
-		System.out.println(order);
-		return null;
-		//return orderService.findByOrderId(order); 
+	@PostMapping("/getItems")
+	public List<OrderItem> findByOrderId(@RequestBody String orderid) {
+		System.out.println(Integer.parseInt(orderid));
+		
+		return orderService.findByOrderId(orderid); 
 	}
 	
 	

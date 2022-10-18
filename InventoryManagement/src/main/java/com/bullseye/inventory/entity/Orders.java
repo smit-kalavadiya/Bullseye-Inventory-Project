@@ -15,6 +15,10 @@ public class Orders{
 	String address;
 	String status;
 	String orderby;
+	long subtotal;
+	long shipping;
+	long tax;
+	long grandtotal;
 	String title;
 	
 	public String getOrderby() {
@@ -56,21 +60,54 @@ public class Orders{
 	public String getStatus() {
 		return status;
 	}
-	public Orders() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Orders(int id, String type, String date, String address, String status, String orderBy, String title) {
+	public long getSubtotal() {
+		return subtotal;
+	}
+	public void setSubtotal(long subtotal) {
+		this.subtotal = subtotal;
+	}
+	public long getShipping() {
+		return shipping;
+	}
+	public void setShipping(long shipping) {
+		this.shipping = shipping;
+	}
+	public long getTax() {
+		return tax;
+	}
+	public void setTax(long tax) {
+		this.tax = tax;
+	}
+	public long getGrandtotal() {
+		return grandtotal;
+	}
+	public void setGrandtotal(long grandtotal) {
+		this.grandtotal = grandtotal;
+	}
+	public Orders(int id, String type, String date, String address, String status, String orderby, long subtotal,
+			long shipping, long tax, long grandtotal, String title) {
 		super();
 		this.id = id;
 		this.type = type;
 		this.date = date;
 		this.address = address;
 		this.status = status;
-		this.orderby = orderBy;
+		this.orderby = orderby;
+		this.subtotal = subtotal;
+		this.shipping = shipping;
+		this.tax = tax;
+		this.grandtotal = grandtotal;
 		this.title = title;
 	}
+	public Orders() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
 }

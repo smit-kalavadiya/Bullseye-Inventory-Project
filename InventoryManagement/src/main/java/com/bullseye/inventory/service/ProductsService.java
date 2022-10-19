@@ -25,4 +25,10 @@ public class ProductsService {
 		return product_repo.findById(parseInt);
 	}
 
+	public void updateProduct(Products product) {
+		
+		product_repo.updateProduct(product.getCost(),product.getDescription(),product.getImage(),product.getName(),product.getQuantity(),product.getSeason(),product.getShelflocation(),product.getWeight(),product.getId());
+		
+	}
+
 }

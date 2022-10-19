@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bullseye.inventory.entity.Orders;
 import com.bullseye.inventory.entity.Products;
 import com.bullseye.inventory.service.ProductsService;
 
@@ -32,6 +33,12 @@ public class ProductsController {
 	@PostMapping("/products")
 	public Optional<Products> findById(@RequestBody String id) {
 		return service.findById(Integer.parseInt(id));
+	}
+	
+	@CrossOrigin(origins = "http://localhost:4200")
+	@PostMapping("/updateproduct")
+	public void updateOrder(@RequestBody Products product) {
+		service.updateProduct(product);
 	}
 	
 }

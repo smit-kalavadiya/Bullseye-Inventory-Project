@@ -3,8 +3,13 @@ package com.bullseye.inventory.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity
+import org.hibernate.annotations.DynamicUpdate;
+
+@DynamicUpdate
+@Table(name="products")
+@Entity(name="products")
 public class Products {
 	
 	@Id

@@ -24,8 +24,9 @@ public class OrdersService {
 		return repo.save(order);
 	}
 
-	public Optional<Orders> findById(Orders orderid) {
-		return repo.findById(orderid.getId());
+	public void updateOrder(Orders order) {
+		
+		repo.updateOrder(order.getStatus(), order.getId());
 	}
 
 }

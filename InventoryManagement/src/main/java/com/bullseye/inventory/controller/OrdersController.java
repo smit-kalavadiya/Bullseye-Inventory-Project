@@ -33,10 +33,8 @@ public class OrdersController {
 	
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/updateorder")
-	public Optional<Orders> updateOrder(@RequestBody Orders orderid) {
-		Optional<Orders> order = service.findById(orderid);
-		order = Optional.of(orderid);
-		return order;
+	public void updateOrder(@RequestBody Orders order) {
+		service.updateOrder(order);
 	}
 	
 }

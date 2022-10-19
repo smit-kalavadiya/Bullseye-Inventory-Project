@@ -1,6 +1,7 @@
 package com.bullseye.inventory.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,10 @@ public class OrdersService {
 
 	public Orders sendOrder(Orders order) {
 		return repo.save(order);
+	}
+
+	public Optional<Orders> findById(Orders orderid) {
+		return repo.findById(orderid.getId());
 	}
 
 }

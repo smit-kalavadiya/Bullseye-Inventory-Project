@@ -1,6 +1,7 @@
 package com.bullseye.inventory.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -28,6 +29,14 @@ public class OrdersController {
 	@PostMapping("/sendOrder")
 	public Orders sendOrder(@RequestBody Orders order) {
 		return service.sendOrder(order);
+	}
+	
+	@CrossOrigin(origins = "http://localhost:4200")
+	@PostMapping("/updateorder")
+	public Optional<Orders> updateOrder(@RequestBody Orders orderid) {
+		Optional<Orders> order = service.findById(orderid);
+		order = Optional.of(orderid);
+		return order;
 	}
 	
 }

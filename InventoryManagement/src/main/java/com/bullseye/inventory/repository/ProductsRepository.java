@@ -18,4 +18,10 @@ public interface ProductsRepository extends JpaRepository<Products, Integer> {
 	void updateProduct(long cost, String description, String image, String name, int quantity, String season,
 			int shelflocation, long weight, int id);
 	
+	//new
+	@Modifying
+	@Transactional
+	@Query("delete products p where p.id = ?1")
+	void deleteProduct(int id);
+	
 }

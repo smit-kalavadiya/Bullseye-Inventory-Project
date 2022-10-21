@@ -34,5 +34,10 @@ public class ProductsService {
 	public Products addProduct(Products product) {
 		return product_repo.save(product);
 	}
+	
+	//new
+	public void deleteById(int parseInt) {
+		 product_repo.deleteProduct(parseInt);
+	}
 
 }

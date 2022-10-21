@@ -41,4 +41,10 @@ public class ProductsController {
 		service.updateProduct(product);
 	}
 	
+	@CrossOrigin(origins = "http://localhost:4200")
+	@PostMapping("/addproduct")
+	public Products addProduct(@RequestBody Products product) {
+		
+		return service.addProduct(product);
+	}
 }

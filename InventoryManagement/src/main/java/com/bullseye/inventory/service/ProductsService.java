@@ -31,4 +31,8 @@ public class ProductsService {
 		
 	}
 
+	public Products addProduct(Products product) {
+		return product_repo.save(product);
+	}
+
 }
